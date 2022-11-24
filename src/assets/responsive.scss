@@ -1,0 +1,1154 @@
+// <= 739px
+@media (max-width: 46.1875em) {
+  .navbar {
+    padding: 20px 16px;
+    &__wrapper,
+    &__logo {
+      display: none;
+    }
+
+    &__mobile-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__icon {
+      display: block;
+      opacity: 1;
+      cursor: pointer;
+      transition: all 0.3s linear 0s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__close {
+      display: none;
+
+      &:checked ~ .navbar__overlay {
+        display: block;
+      }
+
+      &:checked ~ .navbar__mobile {
+        transform: translateX(0%);
+      }
+    }
+
+    &__mobile {
+      display: block;
+      width: 100%;
+      opacity: 1;
+
+      &-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        width: 60px;
+        height: 60px;
+        margin-left: auto;
+        opacity: 1;
+        transition: all 0.3s linear;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-icon {
+        width: 24px;
+        height: 24px;
+        background-color: var(--neutral-1-05);
+        mask: url(./header/close-icon.svg) no-repeat center / contain;
+        -webkit-mask: url(./header/close-icon.svg) no-repeat center / contain;
+      }
+    }
+
+    &__overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      animation: fadeInKeyFrame linear 0.3s;
+    }
+  }
+
+  .header {
+    min-height: 100vh;
+
+    .banner {
+      flex-direction: column;
+      padding-top: 80px;
+
+      &__title {
+        font-size: 3.4rem;
+      }
+
+      &__description {
+        margin-bottom: 32px;
+        font-size: 1.2rem;
+      }
+      &__card {
+        margin-top: 24px;
+        align-items: center;
+        transform: none;
+        animation: none;
+        z-index: -1;
+
+        &-top {
+          padding: 20px 20px 0px 20px;
+          width: 86%;
+          &::after {
+            content: none;
+          }
+          img {
+            height: 60%;
+          }
+        }
+
+        &-body {
+          padding: 0 14px;
+          top: 292px;
+          left: 0;
+
+          &-title,
+          &-detail-name {
+            &::after {
+              content: none;
+            }
+          }
+        }
+
+        &-footer {
+          padding: 10px 0;
+          width: 100%;
+          background: none;
+
+          &::after {
+            content: none;
+          }
+        }
+      }
+      &__decorate-1 {
+        display: none;
+        animation: none;
+      }
+      &__decorate-2 {
+        top: 70px;
+        right: 8px;
+        animation: none;
+      }
+      &__decorate-3 {
+        display: none;
+        animation: none;
+      }
+    }
+  }
+
+  .body__layout {
+    --distant-bottom: 32px;
+    --header-title: 2.6rem;
+    .auction {
+      margin-bottom: var(--distant-bottom);
+      &__nav {
+        &-left-feature {
+          button {
+            display: none;
+          }
+          &-title {
+            font-size: var(--header-title);
+          }
+        }
+        &-right-feature {
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .collection {
+      margin-bottom: var(--distant-bottom);
+      &__nav {
+        &-mobile-title {
+          display: none;
+        }
+
+        &-left-feature {
+          &-ethereum {
+            display: none;
+          }
+          &-btn-wrapper {
+            display: none;
+          }
+
+          &-title {
+            font-size: var(--header-title);
+          }
+        }
+        &-right-feature {
+          display: none;
+        }
+      }
+
+      &__card {
+        &-top {
+          &-right-image {
+            &-bottom {
+              &-1 {
+                margin-right: 0;
+                &::before {
+                  content: "12+";
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 72px;
+                  font-size: 2rem;
+                  line-height: 3rem;
+                  color: var(--white);
+                  background: var(--overlay);
+                  border-radius: 8px;
+                }
+              }
+              &-2 {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // TOP ARTISTS
+    .top-artists {
+      margin-bottom: var(--distant-bottom);
+      &__nav {
+        &-left-feature {
+          &-ethereum {
+            display: none;
+          }
+          &-title {
+            font-size: var(--header-title);
+          }
+        }
+        &-right-feature {
+          &-see-all {
+            display: none;
+          }
+        }
+      }
+      &__card {
+        padding: 16px 0;
+      }
+    }
+
+    .trending-nft {
+      --distant-bottom: 64px;
+      margin-bottom: var(--distant-bottom);
+
+      &__nav {
+        &-mobile-title {
+          display: none;
+        }
+
+        &-left-feature {
+          &-ethereum {
+            display: none;
+          }
+          &-btn-wrapper {
+            display: none;
+          }
+
+          &-title {
+            font-size: var(--header-title);
+          }
+        }
+
+        &-right-feature {
+          display: none;
+        }
+      }
+
+      &__swiper {
+        &-prev,
+        &-next {
+          display: none;
+        }
+      }
+    }
+
+    .advertise {
+      margin-bottom: var(--distant-bottom);
+      &__cards {
+        display: none;
+      }
+
+      &__info {
+        &-title {
+          font-size: var(--header-title);
+        }
+      }
+    }
+
+    .category {
+      --distant-bottom: 64px;
+      margin-bottom: var(--distant-bottom);
+      &__nav {
+        &-title {
+          font-size: var(--header-title);
+        }
+      }
+    }
+
+    .marketplace {
+      margin-bottom: var(--distant-bottom);
+
+      &__info {
+        margin-bottom: 32px;
+        &-title {
+          font-size: var(--header-title);
+        }
+      }
+
+      &__cards {
+        display: none;
+      }
+    }
+
+    .nft {
+      margin-bottom: var(--distant-bottom);
+      flex-direction: column;
+      align-items: flex-start;
+      &__info {
+        margin-bottom: 32px;
+        &-sub-title {
+          padding-right: 0;
+        }
+      }
+
+      &__card {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .sell {
+      &__nav {
+        &-title {
+          font-size: var(--header-title);
+        }
+      }
+    }
+    .app-download {
+      margin-bottom: var(--distant-bottom);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 30px 40px 30px;
+      &__info {
+        margin-bottom: 32px;
+        margin-right: 0;
+
+        &-feature {
+          justify-content: space-between;
+
+          button {
+            &:first-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      &__app-install {
+        display: block;
+      }
+      &__mobile-app {
+        align-items: flex-start;
+        margin-bottom: 32px;
+        margin-right: 0;
+        img {
+          width: 100%;
+        }
+      }
+
+      &__qr {
+        display: block;
+        &-code {
+          margin-bottom: 16px;
+          margin-right: 0;
+          img {
+            width: 70%;
+          }
+        }
+        &-info {
+          &-arrow-left-icon {
+            display: none;
+          }
+
+          &-text {
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__wrapper {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    &__about-company {
+      margin-bottom: 32px;
+
+      &-description {
+        padding-right: 0;
+      }
+    }
+
+    &__company-detail {
+      flex-direction: column;
+      &-info {
+        margin-bottom: 32px;
+      }
+
+      &-feedback {
+        margin-bottom: 32px;
+      }
+
+      &-contact {
+        &-wrapper {
+          margin-bottom: 16px;
+        }
+      }
+
+      &-community {
+        &-wrapper {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  .login,
+  .register {
+    &__layout {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+
+      &-left {
+        flex: 2;
+        width: 100%;
+        margin-bottom: 16px;
+      }
+      &-right {
+        flex: 4;
+        padding: 0 16px;
+
+        &-title {
+          font-size: 2.2rem;
+          line-height: 2.8rem;
+        }
+      }
+    }
+  }
+
+  .wrapper-no-banner {
+    padding-top: calc(74px + 30px);
+  }
+}
+
+// > 740px - <= 1023px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .navbar {
+    padding: 20px 16px;
+    &__wrapper,
+    &__logo {
+      display: none;
+    }
+
+    &__mobile-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__icon {
+      display: block;
+      opacity: 1;
+      cursor: pointer;
+      transition: all 0.3s linear 0s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__close {
+      display: none;
+
+      &:checked ~ .navbar__overlay {
+        display: block;
+      }
+
+      &:checked ~ .navbar__mobile {
+        transform: translateX(0%);
+      }
+    }
+
+    &__mobile {
+      display: block;
+      opacity: 1;
+
+      &-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        width: 60px;
+        height: 60px;
+        margin-left: auto;
+        opacity: 1;
+        transition: all 0.3s linear;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        background-color: var(--neutral-1-05);
+        mask: url(./header/close-icon.svg) no-repeat center / contain;
+        -webkit-mask: url(./header/close-icon.svg) no-repeat center / contain;
+      }
+    }
+
+    &__overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      animation: fadeInKeyFrame linear 0.3s;
+    }
+  }
+
+  .header {
+    height: 76vh;
+
+    .banner {
+      flex-direction: column;
+      padding-top: 100px;
+
+      &__card {
+        z-index: -1;
+        transform: none;
+        animation: none;
+
+        &-top {
+          padding: 20px 20px 0px 20px;
+          &::after {
+            content: none;
+          }
+          img {
+            height: 60%;
+          }
+        }
+
+        &-body {
+          padding: 0 14px;
+          top: 292px;
+          left: 0;
+
+          &-title,
+          &-detail-name {
+            &::after {
+              content: none;
+            }
+          }
+        }
+        &-footer {
+          padding: 10px 0;
+          width: 100%;
+          background: none;
+
+          &::after {
+            content: none;
+          }
+        }
+      }
+
+      &__decorate-1 {
+        display: none;
+        animation: none;
+      }
+      &__decorate-2 {
+        top: 62px;
+        right: -26px;
+        animation: none;
+      }
+      &__decorate-3 {
+        left: 10px;
+        top: 500px;
+        animation: none;
+
+        &::after {
+          left: 0;
+          bottom: 260px;
+        }
+      }
+    }
+  }
+
+  .body__layout {
+    .auction {
+      &__nav {
+        margin-top: 120px;
+      }
+    }
+
+    .collection {
+      &__nav {
+        display: block;
+
+        &-mobile-title {
+          display: inline-block;
+          margin-bottom: 16px;
+        }
+        &-feature {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &-left-feature {
+          &-title {
+            display: none;
+          }
+          &-ethereum {
+            display: none;
+          }
+
+          &-today {
+            background: var(--white) !important;
+          }
+        }
+      }
+
+      &__card {
+        &-top {
+          &-right-image {
+            &-bottom {
+              &-1 {
+                margin-right: 0;
+                &::before {
+                  content: "12+";
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 72px;
+                  font-size: 2rem;
+                  line-height: 3rem;
+                  color: var(--white);
+                  background: var(--overlay);
+                  border-radius: 8px;
+                }
+              }
+              &-2 {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .trending-nft {
+      &__nav {
+        display: block;
+
+        &-mobile-title {
+          display: inline-block;
+          margin-bottom: 16px;
+        }
+        &-feature {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &-left-feature {
+          &-title {
+            display: none;
+          }
+          &-ethereum {
+            display: none;
+          }
+
+          &-today {
+            background: var(--white) !important;
+          }
+        }
+      }
+    }
+
+    .advertise {
+      &__cards {
+        display: none;
+      }
+    }
+
+    .marketplace {
+      &__info {
+        margin-bottom: 64px;
+      }
+    }
+
+    .nft {
+      padding: 50px;
+      &__info {
+        margin-bottom: 32px;
+      }
+
+      &__card {
+        img {
+          width: 500px;
+        }
+      }
+    }
+
+    .app-download {
+      flex-direction: column;
+      padding: 40px 40px 40px 40px;
+      &__info {
+        margin-bottom: 32px;
+        margin-right: 0;
+      }
+      &__app-install {
+        display: block;
+      }
+      &__mobile-app {
+        display: block;
+        align-items: center;
+        margin-bottom: 32px;
+        margin-right: 0;
+      }
+
+      &__qr {
+        display: block;
+        &-code {
+          margin-right: 0;
+          margin-bottom: 16px;
+          img {
+            width: 200px;
+          }
+        }
+        &-info {
+          &-arrow-left-icon {
+            display: none;
+          }
+          &-text {
+            padding-right: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__wrapper {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    &__about-company {
+      margin-bottom: 32px;
+
+      &-description {
+        padding-right: 0;
+      }
+    }
+
+    &__company-detail {
+      flex-direction: column;
+      &-info {
+        margin-bottom: 32px;
+      }
+
+      &-feedback {
+        margin-bottom: 32px;
+      }
+
+      &-contact {
+        &-wrapper {
+          margin-bottom: 16px;
+        }
+      }
+
+      &-community {
+        &-wrapper {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  .login,
+  .register {
+    &__layout {
+      flex-direction: column;
+      width: 100%;
+
+      &-left {
+        flex: 2;
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      &-right {
+        flex: 4;
+      }
+    }
+  }
+
+  .wrapper-no-banner {
+    padding-top: calc(74px + 30px);
+  }
+}
+// > 1024px
+@media (min-width: 64em) {
+  .header {
+    min-height: 50vh;
+
+    .banner {
+      &__card {
+        margin-top: 50px;
+        &-top {
+          --card-size-height: 404px;
+          height: var(--card-size-height);
+
+          &:after {
+            height: calc(var(--card-size-height - 4px));
+          }
+        }
+        &-body {
+          left: -38px;
+          top: 210px;
+        }
+      }
+
+      &__decorate-1 {
+        top: 70px;
+      }
+      &__decorate-2 {
+        top: 70px;
+      }
+      &__decorate-3 {
+        bottom: -140px;
+      }
+    }
+  }
+
+  .body__layout {
+    .collection {
+      &__nav {
+        &-left-feature {
+          &-ethereum {
+            display: none;
+          }
+        }
+      }
+      &__card {
+        &-top {
+          &-right-image {
+            &-bottom {
+              &-1 {
+                margin-right: 0;
+                &::before {
+                  content: "12+";
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 72px;
+                  font-size: 2rem;
+                  line-height: 3rem;
+                  color: var(--white);
+                  background: var(--overlay);
+                  border-radius: 8px;
+                }
+              }
+              &-2 {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .marketplace {
+      &__info {
+        margin-bottom: 64px;
+      }
+      &__card {
+        &-left {
+          img {
+            width: calc(352px / 1.5);
+            height: calc(358px / 1.5);
+          }
+        }
+        &-right {
+          &-top {
+            transform: translateY(30px);
+            img {
+              width: calc(172px / 1.2);
+              height: calc(160px / 1.2);
+            }
+          }
+
+          &-bottom {
+            transform: translateY(60px) translateX(-39px);
+            img {
+              width: calc(128px / 1.2);
+              height: calc(120px / 1.2);
+            }
+            border-radius: 16px;
+          }
+        }
+      }
+    }
+
+    .app-download {
+      justify-content: center;
+      padding: 40px 40px 40px 40px;
+      &__info {
+        margin-bottom: 32px;
+      }
+      &__app-install {
+        justify-content: center;
+      }
+      &__mobile-app {
+        align-items: center;
+        margin-bottom: 32px;
+      }
+
+      &__qr {
+        flex: none;
+        &-code {
+          flex: none;
+          width: 200px;
+        }
+        &-info {
+          flex: none;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__about-company {
+      &-description {
+        padding-right: 100px;
+      }
+    }
+  }
+}
+
+// > 1024px - <= 1239px
+@media (min-width: 64em) and (max-width: 77.4375em) {
+  .navbar {
+    padding: 20px 16px;
+  }
+
+  // .header {
+  //   min-height: 50vh;
+
+  //   .banner {
+  //     &__card {
+  //       margin-top: 50px;
+  //       &-top {
+  //         --card-size-height: 404px;
+  //         height: var(--card-size-height);
+
+  //         &:after {
+  //           height: calc(var(--card-size-height - 4px));
+  //         }
+  //       }
+  //       &-body {
+  //         left: -38px;
+  //         top: 210px;
+  //       }
+  //     }
+
+  //     &__decorate-1 {
+  //       top: 70px;
+  //     }
+  //     &__decorate-2 {
+  //       top: 70px;
+  //     }
+  //     &__decorate-3 {
+  //       bottom: -140px;
+  //     }
+  //   }
+  // }
+
+  // .body__layout {
+  //   .collection {
+  //     &__nav {
+  //       &-left-feature {
+  //         &-ethereum {
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //     &__card {
+  //       &-top {
+  //         &-right-image {
+  //           &-bottom {
+  //             &-1 {
+  //               margin-right: 0;
+  //               &::before {
+  //                 content: "12+";
+  //                 display: flex;
+  //                 justify-content: center;
+  //                 align-items: center;
+  //                 position: absolute;
+  //                 top: 0;
+  //                 left: 0;
+  //                 right: 0;
+  //                 width: 100%;
+  //                 height: 72px;
+  //                 font-size: 2rem;
+  //                 line-height: 3rem;
+  //                 color: var(--white);
+  //                 background: var(--overlay);
+  //                 border-radius: 8px;
+  //               }
+  //             }
+  //             &-2 {
+  //               display: none;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .marketplace {
+  //     &__info {
+  //       margin-bottom: 64px;
+  //     }
+  //     &__card {
+  //       &-left {
+  //         img {
+  //           width: calc(352px / 1.5);
+  //           height: calc(358px / 1.5);
+  //         }
+  //       }
+  //       &-right {
+  //         &-top {
+  //           transform: translateY(30px);
+  //           img {
+  //             width: calc(172px / 1.2);
+  //             height: calc(160px / 1.2);
+  //           }
+  //         }
+
+  //         &-bottom {
+  //           transform: translateY(60px) translateX(-39px);
+  //           img {
+  //             width: calc(128px / 1.2);
+  //             height: calc(120px / 1.2);
+  //           }
+  //           border-radius: 16px;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .app-download {
+  //     justify-content: center;
+  //     padding: 40px 40px 40px 40px;
+  //     &__info {
+  //       margin-bottom: 32px;
+  //     }
+  //     &__app-install {
+  //       justify-content: center;
+  //     }
+  //     &__mobile-app {
+  //       align-items: center;
+  //       margin-bottom: 32px;
+  //     }
+
+  //     &__qr {
+  //       flex: none;
+  //       &-code {
+  //         flex: none;
+  //         width: 200px;
+  //       }
+  //       &-info {
+  //         flex: none;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .footer {
+  //   &__about-company {
+  //     &-description {
+  //       padding-right: 100px;
+  //     }
+  //   }
+  // }
+}
+
+// Device 375px x 667px
+@media (width: 23.4375em) and (height: 41.6875em) {
+  .auction {
+    padding-top: 160px;
+  }
+}
+
+// Device 414px x 736px
+@media (width: 25.875em) and (height: 46em) {
+  .auction {
+    padding-top: 100px;
+  }
+}
